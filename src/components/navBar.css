@@ -1,0 +1,29 @@
+.Nav{
+    display: flex;
+    height: 100px;
+    margin-top: 0px;
+    border: 2px, solid;
+    background-color: rgb(226, 226, 8);
+
+}
+.henry{
+    margin-left: 2rem;
+}
+.categories{
+    display: flex;
+    margin-top: 2px;
+    margin-left:2rem
+}
+.filter{
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.filter-prices{
+    display: flex;
+    margin-top: 0px;
+    margin-left:2rem;
+    /* margin-bottom:2rem; */
+}
