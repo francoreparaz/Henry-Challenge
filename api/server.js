@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 //app.use(bodyParser.json({ limit: '50mb' }));
 
 //routes
-app.use(require("./Routes/routes"));
+app.use(require("./routes"));
 
 app.listen(5000);
 console.log("Server on port 5000")
