@@ -1,0 +1,22 @@
+.Search-input{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 2px solid #626262;
+    padding: 6px 6px 6px 35px;
+    width: 25%;
+    height: 20px;  
+   
+}
+.button{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 2px solid;
+    width: 100px;
+    height: 35px;  
+    margin-left: 2px;
+    
+}
