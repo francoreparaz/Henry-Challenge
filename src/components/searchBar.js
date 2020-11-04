@@ -4,8 +4,17 @@ import "./searchBar.css"
 export default function SearchBar(){
     const [input,setInput]=useState("")
 
+ 
+     function peticion(){
+        const inputValue= input
+        axios.get(`http://localhost:5000/api/search?q=${inputValue}`)
+        .then(res=>console.log(res.data))
+        .catch(error=>console.log(error))
+     }
+
     function handleSubmit(e){
        e.preventDefault();
+       peticion()
        setInput("")
     }
     return(
