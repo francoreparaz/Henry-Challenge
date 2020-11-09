@@ -7,13 +7,24 @@ router.get("/api/search",(req,res)=>{
     console.log(element)
     axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${element}`)
     .then((response) => {
-        const result={response:response.data.results}
-        res.send(result).status(200)
-        
+        let result= response.data.results
+        let productos= result.map(a=>{return{
+            id: a.id,
+            thumbnail:a.thumbnail,
+            title: a.title,
+            price:a.price,
+            currency_id:a.currency_id,
+            available_quantity: a.available_quantity,
+            condition: a.condition
+
+
+        }})
+        console.log(productos)
+        res.send(productos).status(200)
     })
     
     .catch((error) => {
-        console.log(error);
+        //console.log(error);
         res.send(error)
     });
     

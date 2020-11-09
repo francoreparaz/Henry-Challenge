@@ -1,14 +1,43 @@
 .Nav{
-    display: flex;
-    height: 100px;
+    display:flex;
+    height: 10rem;
     margin-top: 0px;
-    border: 2px, solid;
+    margin:1px;
+    width:100%;
+    border:0.1rem solid;
+    border-color: rgb(54, 54, 54);
     background-color: rgb(226, 226, 8);
 
 }
+.logo{
+    
+   border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition:         transform .8s ease-in-out;
+      
+}
+.logo:hover{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      
+}
+.ubi{
+    margin-right: 1px;
+    height: 3rem;
+    width: 3rem;
+}
+.ubicacionYlogo{
+    margin-right: 5rem;
+}
+.avenida{
+   align-items: center;
+}
 .henry{
     margin-left: 2rem;
+    margin-top: 2rem;
+   
 }
+
 .categories{
     display: flex;
     margin-top: 2px;
@@ -19,6 +48,7 @@
     padding: 1rem;
     margin: 1rem;
     border-bottom: 0.1rem #c0c0c0 solid;
+    height: 4rem;
 }
 
 .filter-prices{
