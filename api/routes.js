@@ -19,7 +19,7 @@ router.get("/api/search",(req,res)=>{
 
 
         }})
-        console.log(productos)
+
         res.send(productos).status(200)
     })
     
@@ -27,8 +27,11 @@ router.get("/api/search",(req,res)=>{
         //console.log(error);
         res.send(error)
     });
+
     
 })
+
+
 
 module.exports = router;
 

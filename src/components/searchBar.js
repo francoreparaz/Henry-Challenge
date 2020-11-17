@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import axios from "axios";
 import "./searchBar.css"
-import ProductsCard from "./ProductsCard";
+import Catalogo from "./Catalogo";
 
 export default function SearchBar({state,SetStateInput,handleSubmit}){
 // [input,setInput]=useState("")

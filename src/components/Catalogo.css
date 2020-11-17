@@ -1,9 +1,8 @@
-.productos{
+
+.cartas{
     display: inline-flex;
     flex-direction: column;
     margin: 2rem;
-}
-.cartas{
     width: 25rem;
     height: 100%;
     
