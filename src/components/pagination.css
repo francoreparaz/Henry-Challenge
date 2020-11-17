@@ -1,0 +1,18 @@
+.pagination{
+    display: inline-flex;
+    padding: 2px;
+    
+    
+    
+}
+.page-item{
+    display: inline;
+    flex-direction: row;
+    border: solid;
+    border-width: 2px;
+    padding: 5px;
+    margin-left: 5px;
+}
+.page-item:hover{
+    background-color: gray;
+}

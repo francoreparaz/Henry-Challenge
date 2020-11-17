@@ -10,13 +10,15 @@ export default function NavBar({state,SetStateInput,handleSubmit,sort,sortProduc
   return(
     <div className="Nav">
   <div className="henry">
-     
+     <Link to="/">
+       
       <h2>Henry-Challenge <img className="logo" src={logo}/> </h2>
+     </Link>
     
      <div className="ubicacionYlogo">
       <p>
         <img className="ubi"src={logoUbi}></img>
-           Enviar a Toni
+           Enviar a Henry
          <strong>
            <p className="avenida">Avenida siempre viva 742</p>
            </strong>
@@ -29,7 +31,7 @@ export default function NavBar({state,SetStateInput,handleSubmit,sort,sortProduc
          <Navbar>
             <SearchBar state={state} SetStateInput={SetStateInput} handleSubmit={handleSubmit}/>
          <div className="filter-prices">
-        <h5>Prices</h5>
+        <h5>Precios</h5>
         </div> 
          <div className="filter">
           <select value={sort} onChange={sortProducts}>
@@ -46,9 +48,9 @@ export default function NavBar({state,SetStateInput,handleSubmit,sort,sortProduc
         <div className="filter">
             
             <select value={condicion} onChange={filterCondicion}>
-                <option>Filter</option>
-                <option value="Nuevo">Nuevo</option>
-                <option value="Usado">Usado</option>
+                <option value= "">Filter</option>
+                <option value="new">Nuevo</option>
+                <option value="used">Usado</option>
                 
             </select>
         </div>
