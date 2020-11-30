@@ -4,7 +4,7 @@ import "./searchBar.css"
 import Catalogo from "./Catalogo";
 
 export default function SearchBar({state,SetStateInput,handleSubmit}){
-// [input,setInput]=useState("")
+
 
     return(
         <form className="Form" onSubmit={handleSubmit}>

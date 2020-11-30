@@ -4,6 +4,7 @@ const axios=require ("axios");
 
 router.get("/api/search",(req,res)=>{
     const element = req.query.q;
+    
     console.log(element)
     axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=${element}`)
     .then((response) => {

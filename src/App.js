@@ -5,8 +5,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Catalogo from './components/Catalogo';
 import { useState,useEffect } from 'react';
 import Axios from 'axios';
-import {Link} from "react-router-dom"
-import ProductCard from './components/ProductCard';
 import Carrusel from './components/Carrusel';
 import Pagination from './components/pagination';
 
@@ -19,16 +17,12 @@ const[productos,setProductos]=useState([])
 const[sort,setSort]=useState("")
 const[condicion,setCondicion]=useState("")
 const[currentPage,setCurrentPage]=useState(1)
-const[productsPerPage,setproductsPerPage]=useState(30)
-
-
-
+const[productsPerPage]=useState(30)
 
 
 function SetStateInput(props){
   setInput(props)
 }
-
 
 
   function peticion(){
@@ -41,12 +35,7 @@ function SetStateInput(props){
       
     }
  
-//  if(productos > 0){
-//    localStorage.setItem("productos", JSON.stringify(productos));
-//  }
-//var aValue = localStorage.getItem("productos")
 
- 
 function handleSubmit(e){
   e.preventDefault();
   peticion()
@@ -55,8 +44,6 @@ function handleSubmit(e){
 
 function sortProducts(e){
   const sort= e.target.value;
-  console.log(sort)
-  setSort(sort);
   setProductos(productos.slice().sort((a,b)=>(
     sort === "Lowest"?
     ((a.price > b.price) ? 1 : -1):
@@ -68,13 +55,13 @@ function sortProducts(e){
 
 function filterCondicion(e){
   const condition = e.target.value
-  if(e.target.value === ""){
+  if(condition === ""){
      setCondicion(condition)
      setProductos(productos)
    
   }else
   
-   if(e.target.value === "new"){
+   if(condition === "new"){
     setCondicion(condition);
     setProductos(productos.slice().filter(x=>x.condition.indexOf(condition)>=0) )
    } else{
@@ -110,8 +97,8 @@ function paginate(pageNumbers){
      <hr></hr>
     
      <Route exact path="/" render={() => <Catalogo productos={currentProducts}/>}/>
-    <Route path="/productos/:id" render={() => <ProductCard productos={productos}/>}></Route>
       </Router>
+
       <Pagination productsPerPage={productsPerPage} totalProducts={productos.length} paginate={paginate}/>
     </div>
   );
